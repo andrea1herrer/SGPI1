@@ -1,0 +1,75 @@
+﻿@model SGPI.Models.Usuario
+
+@{
+    ViewData["Title"] = "Reportes";
+    Layout = "_LayoutADMON";
+}
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>REPORTES</h1>
+        </div>
+        <div class="col">
+            <br />
+            <a href="/Administrador/Login" style="color:hotpink"><h4 class="text-right">Cerrar sesión</h4></a>
+        </div>
+    </div>
+</div>
+
+<br />
+<section class="login-block">
+    <div class="container">
+        <center>
+<div class="row">
+    <div class="col-sm-4 justify-content-md-center align-items-center ">
+                <br />
+        <h5> TIPO DE DOC </h5>
+        @Html.DropDownList("IdDoc", new SelectList(ViewBag.documento, "IdDoc", "TipoDocumento"), new{@class="form-control dropdown"})
+                <br />
+    </div>
+    <div class="col-sm-4 justify-content-md-center align-items-center">
+        <form>
+                    <br />
+            <h5> NÚM DE DOC </h5>
+            <div class="col ">
+                <input asp-for="NumeroDocumento" type="text" class="form-control col-sm-10" id="Documentotxt" placeholder="Número de documento">
+            </div>
+        </form>
+ </div>
+    <br />
+
+    
+                <br />
+    </div>
+        </center>
+  
+    <table class="table table-bordered">
+        <tr>
+            <th>Nombre</th>
+            <th>Primer apellido</th>
+            <th>Segundo apellido</th>
+            <th>Género</th>
+            <th>Documento</th>
+            <th>Programa</th>
+            <th>Rol</th>
+            <th>Correo electrónico</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td><td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            
+        </tr>
+    </table>
+
+
+    <div class="col-lg-6 offset-lg-5">
+        <button type="button" class="btn" style="background-color:coral">Generar Reporte</button>
+    </div>
+        <br />
+    </div>
+</section>

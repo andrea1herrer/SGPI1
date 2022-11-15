@@ -1,0 +1,132 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Homologacion";
+    Layout = "_LayoutCOOR";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>HOMOLOGACIÓN</h1>
+        </div>
+        <div class="col">
+            <br />
+            <a href="/Administrador/Login" style="color:hotpink"><h4 class="text-right">Cerrar sesión</h4></a>
+        </div>
+    </div>
+</div>
+
+<br />
+
+<section class="login-block">
+    <div class="container">
+        <div class="col">
+            <br />
+            <center>
+                <h4>Buscar Estudiante</h4>
+
+                <input type="text"
+                       class="form-control col-sm-3" id="Buscarestdtxt" placeholder="Ingresar estudiante"
+                       name="Buscar Estudiante">
+                <br />
+                <button type="button" class="btn" style="background-color:lightcoral">Buscar</button>
+
+            </center>
+         
+            </br />
+            <div class="row">
+                <div class="col-sm-4 justify-content-md-center align-items-center">
+                    <form>
+                        <h5> NOMBRE </h5>
+                        <div class="col">
+                            <input type="text" class="form-control col-sm-10" id="Nombretxt" placeholder="Ingrese su nombre" name="Nombre">
+                        </div>
+                    </form>
+                </div>
+
+                <div class="col-sm-4 justify-content-md-center align-items-center h-100">
+                    <form>
+                        <h5> PRIMER APELLIDO </h5>
+                        <div class="col ">
+                            <input type="text" class="form-control col-sm-10" id="Apellido1txt" placeholder="Ingrese su primer apellido" name="Apellido1">
+                        </div>
+                    </form>
+                </div>
+
+                <div class="col-sm-4 justify-content-md-center align-items-center h-100">
+                    <form>
+                        <h5> SEGUNDO APELLIDO</h5>
+                        <div class="col ">
+                            <input type="text" class="form-control col-sm-10" id="Apellido2" placeholder="Ingrese su segundo apellido" name="Apellido2">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-sm-4 justify-content-md-center align-items-center">
+                    <form>
+                        <h5> NÚM DE DOC </h5>
+                        <div class="col ">
+                            <input type="text" class="form-control col-sm-10" id="Documentotxt" placeholder="Número de documento" name="Documento">
+
+                        </div>
+                        <br />
+                    </form>
+                </div>
+
+                <div class="col-sm-4 justify-content-md-center align-items-center ">
+                    <h5> PROGRAMAS </h5>
+                    <select class="form-control col-sm-10" aria-label="Default select example">
+                        <option> Maestría en Gestión de la Información </option>
+                        <option> Especialización en Seguridad de la Información </option>
+                        <option> Maestría en Medio Ambiente </option>
+                    </select>
+                </div>
+
+                <br />
+
+                <br />
+                <br />
+                <table class="table table-bordered">
+                    <tr>
+                        <th>No.</th>
+                        <th>Código</th>
+                        <th>Nombre asignatura</th>
+                        <th>Créditos</th>
+                        <th>Nivel</th>
+                        <th>Programa</th>
+                        <th>Código As Hom</th>
+                        <th>Nombre As Hom</th>
+                        <th>Créditos Hom</th>
+                        <th>Nota</th>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+                <br />
+                <center>
+                <div>
+                    <br />
+                   
+                        <button id="enviarbtn" class="btn" type="submit" style="background-color:darksalmon">Enviar</button>
+                        <button id="cancelarbtn" class="btn btn-secondary" type="submit">Cancelar</button>
+
+                </div>
+                </center>
+            </div>
+        </div>
+        <br />
+        <br />
+</section>
+

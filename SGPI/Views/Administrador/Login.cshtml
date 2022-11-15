@@ -1,0 +1,50 @@
+﻿@model SGPI.Models.Usuario
+
+@{
+    ViewData["Title"] = "Login";
+    Layout = "_LayoutSGPI";
+}
+
+@if (ViewBag.mensaje != null)
+{
+    <h1>@ViewBag.mensaje</h1>
+}
+
+<br />
+<section class="login-block">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 login-sec">
+                <h2 class="text-center">SGPI</h2>
+                <form method = "post" class="login-form">
+                    <div class="form-group">
+                        <label for="usuariotxt">Usuario</label>
+                        <input asp-for="NumeroDocumento" type="text" class="form-control" id="usuariotxt" required />
+
+                    </div>
+                    <div class="form-group">
+                        <label for="passwordtxt">Contraseña</label>
+                        <input asp-for ="Password" type="password" class="form-control" id="passwordtxt" required />
+                    </div>
+
+
+                    <div class="form-check">
+                        <a href="/Administrador/OlvidarContraseña" id="recuperarPass">¿Olvidaste la contraseña?</a>
+                        <button type="submit" class="btn btn-login float-right">INGRESAR</button>
+                    </div>
+
+                </form>
+                <div class="copy-text">Created with <i class="fa fa-heart"></i> by CH</div>
+            </div>
+            <div class="col-md-8 banner-sec">
+                
+                    <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item active">
+                            <img class="d-block img-fluid" src="https://static.pexels.com/photos/33972/pexels-photo.jpg" alt="First slide">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+

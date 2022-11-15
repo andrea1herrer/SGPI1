@@ -1,0 +1,74 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "ProgramarAsignatura";
+    Layout = "_LayoutCOOR";
+}
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>PROGRAMAR ASIGNATURA</h1>
+        </div>
+        <div class="col">
+            <br />
+            <a href="/Administrador/Login" style="color:hotpink"><h4 class="text-right">Cerrar sesión</h4></a>
+        </div>
+    </div>
+</div>
+<br />
+
+
+<section class="login-block">
+    <div class="container">
+        <center>
+<div class="col-sm-4 justify-content-md-center align-items-center">
+    <form>
+        <h5> PERIODO ACADÉMICO </h5>
+        <div class="col ">
+            <input type="text" class="form-control col-sm-8" id="periodotxt" placeholder="Periodo académico" name="Periodo">
+        </div>
+    </form>
+</div>
+<br />
+<div class="col-sm-4 justify-content-md-center align-items-center ">
+    <h5> PROGRAMAS </h5>
+    <select class="form-control col-sm-12" aria-label="Default select example">
+        <option> Maestría en Gestión de la  Información </option>
+        <option> Especialización en Seguridad de la Información </option>
+        <option> Maestría en Medio Ambiente </option>
+    </select>
+</div>
+<br />
+<br />
+
+<button type="BUTTON" class="btn btn-outline" style="background-color:lightsalmon">BUSCAR</button>
+<br />
+<br />
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Fecha</th>
+            <th>Sala o Aula</th>
+            <th>Asignatura</th>
+            <th>Cod_Asignatura</th>
+            <th>Opción</th>
+
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td input type="date"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><button type="BUTTON" class="btn btn-outline-warning">Agregar</button></td>
+        </tr>
+    </tbody>
+</table>
+</center>
+        <br />
+</div>
+<br />
+</section>

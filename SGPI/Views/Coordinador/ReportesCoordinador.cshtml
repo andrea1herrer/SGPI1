@@ -1,0 +1,81 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "ReporteCoordinador";
+    Layout = "_LayoutCOOR";
+}
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>REPORTES COORDINADOR</h1>
+        </div>
+        <div class="col">
+            <br />
+            <a href="/Administrador/Login" style="color:hotpink"><h4 class="text-right">Cerrar sesión</h4></a>
+        </div>
+    </div>
+</div>
+<br />
+
+<section class="login-block">
+    <div class="container">
+        <center>
+            <div class="row">
+                <div class="col-sm-4 justify-content-md-center align-items-center ">
+                    <br />
+                    <h5> TIPO DE DOC </h5>
+                    <select class="form-control col-sm-10" aria-label="Default select example">
+                        <option> Cédula de ciudadanía </option>
+                        <option> Documento extranjería </option>
+                        <option> Tarjeta de identidad </option>
+                        <option> Nit </option>
+                        <option> Pasaporte </option>
+                    </select>
+                    <br />
+                </div>
+                <br />
+
+                <div class="col-sm-4 justify-content-md-center align-items-center">
+                    <form>
+                        <br />
+                        <h5> NÚM DE DOC </h5>
+                        <div class="col ">
+                            <input type="text" class="form-control col-sm-10" id="Documentotxt" placeholder="Número de documento" name="Documento">
+                        </div>
+                    </form>
+                    <br />
+                </div>
+            </div>
+        </center>
+
+        <table class="table table-bordered">
+            <tr>
+                <th>Nombre</th>
+                <th>Primer apellido</th>
+                <th>Segundo apellido</th>
+                <th>Género</th>
+                <th>Documento</th>
+                <th>Programa</th>
+                <th>Rol</th>
+                <th>Correo electrónico</th>
+            </tr>
+            <tr>
+                <td>Carolina</td>
+                <td>Herrera</td>
+                <td>Villa</td>
+                <td>Femenino</td>
+                <td>1001541891</td>
+                <td>Maestría en Gestión de la Información</td>
+                <td>Estudiante</td>
+                <td>andreeherrera25@gmail.com</td>
+            </tr>
+        </table>
+
+
+        <div class="col-lg-6 offset-lg-5">
+            <button type="button" class="btn" style="background-color:lightsalmon">Generar Reporte</button>
+        </div>
+        <br />
+    </div>
+</section>

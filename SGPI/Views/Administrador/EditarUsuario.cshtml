@@ -1,0 +1,132 @@
+﻿@model SGPI.Models.Usuario
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "EditarUsuario";
+    Layout = "_LayoutADMON";
+}
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>EDITAR USUARIO</h1>
+        </div>
+        <div class="col">
+            <br />
+            <a href="/Administrador/Login" style="color:hotpink"><h4 class="text-right">Cerrar sesión</h4></a>
+        </div>
+    </div>
+</div>
+
+<br />
+
+
+<form method="post">
+<section class="login-block">
+    <div class="container">
+        <center>
+            <div class="row">
+
+                <div class="col-sm-4 justify-content-md-center align-items-center ">
+                    <br />
+                    <h5> TIPO DE DOC </h5>
+                     @Html.DropDownList("IdDoc", new SelectList(ViewBag.documento, "IdDoc", "TipoDocumento"), new{@class="form-control dropdown"})
+                </div>
+                <br />
+
+                <div class="col-sm-4 justify-content-md-center align-items-center">
+                        <br />
+                        <h5> NÚM DE DOC </h5>
+                        <div class="col ">
+                            <input asp-for="NumeroDocumento" type="text" class="form-control col-sm-10" id="Documentotxt" placeholder="Número de documento">
+                        </div>
+                </div>
+
+                <div class="col-sm-4 justify-content-md-center align-items-center">
+                        <br />
+                        <h5> GÉNERO </h5>
+                        @Html.DropDownList("IdGenero", new SelectList(ViewBag.genero, "IdGenero", "Genero1"), new{@class="form-control dropdown"})
+                </div>
+                <br />
+                <br />
+                <br />
+
+
+
+            </div>
+            <br />
+
+            <div class="row">
+                <div class="col-sm-4 justify-content-md-center align-items-center">
+                        <h5> PRIMER NOMBRE </h5>
+                        <div class="col">
+                            <input asp-for="PrimerNombre" type="text" class="form-control col-sm-10" id="Nombretxt" placeholder="Ingrese su nombre">
+                        </div>
+                </div>
+
+                <div class="col-sm-4 justify-content-md-center align-items-center">
+                    <h5> SEGUNDO NOMBRE </h5>
+                    <div class="col">
+                        <input asp-for="SegundoNombre" type="text" class="form-control col-sm-10" id="Nombretxt" placeholder="Ingrese su nombre">
+                    </div>
+                </div>
+            <br />
+
+                <div class="col-sm-4 justify-content-md-center align-items-center h-100">
+                        <h5> PRIMER APELLIDO </h5>
+                        <div class="col ">
+                            <input asp-for="PrimerApellido" type="text" class="form-control col-sm-10" id="Apellido1txt" placeholder="Ingrese su primer apellido">
+                        </div>
+                </div>
+            </div>
+            <br />
+
+               <div class="row">
+                    <div class="col col-sm-4 justify-content-md-center align-items-center h-100">
+                        <h5> SEGUNDO APELLIDO</h5>
+                        <div class="col ">
+                            <input asp-for="SegundoApellido" type="text" class="form-control col-sm-10" id="Apellido2" placeholder="Ingrese su segundo apellido">
+                        </div>
+                     </div>
+
+                   <div class="col-sm-4 justify-content-md-center align-items-center h-100">
+                        <h5> CONTRASEÑA</h5>
+                         <div class="col ">
+                            <input asp-for="Password" type="password" class="form-control col-sm-10" id="Apellido2" placeholder="Ingrese su contraseña">
+                        </div>
+                    </div>
+
+                   <div class="col-sm-4 justify-content-md-center align-items-center h-100">
+                        <h5> EMAIL </h5>
+                            <div class="col ">
+                                <input asp-for="Email" type="email" class="form-control col-sm-10" id="Correotxt" placeholder="Ingrese su correo">
+                        </div>
+                    </div>
+              </div>
+
+              <br />
+              <div class="">
+                <div class="col-sm-4 justify-content-md-center align-items-center ">
+                    <h5> ROL </h5>
+                    @Html.DropDownList("IdRol", new SelectList(ViewBag.rol, "IdRol", "Rol1"), new{@class="form-control dropdown"})
+                </div>
+
+                <br />
+                <div class="col-sm-4 justify-content-md-center align-items-center ">
+                    <h5> PROGRAMAS </h5>
+                     @Html.DropDownList("IdPrograma", new SelectList(ViewBag.programa, "IdPrograma", "Programa1"), new{@class="form-control dropdown"})
+                </div>
+                </div>
+            <br />
+            <br />
+        </center>
+
+        <div class="col-lg-6 offset-lg-5">
+            <button type="submit" class="btn" style="background-color:coral">Editar Usuario</button>
+        </div>
+
+        <br />
+        </div>
+</section>
+</form>
